@@ -26,6 +26,15 @@ A callback called if initial image loads successfully, will be called with succe
 #### `onError`
 A callback called if initial image load fails, will be called with failing image url.
 
+#### `img`
+A manually created image object. Used when the ReactImageFallback component is not being mounted right away, but the image should be already loaded.
+To preload the image, you just have to create the object and define its src (should be the same as the src prop you pass to ReactImageFallback), it doesn't have to be mounted in DOM: 
+
+```js
+const img = new window.Image();
+img.src = 'www.example.com/image.jpg';
+```
+
 #### `spread props`
 This component also utilizes jsx spread attributes to pass along custom image attributes such as alt tags and className. Only valid dom props will be spread to the image tag. 
 
