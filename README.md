@@ -32,7 +32,7 @@ To preload the image, you just have to create the object and define its src (sho
 
 ```js
 const img = new window.Image();
-img.src = 'www.example.com/image.jpg';
+img.src = 'my-image.png';
 ```
 
 #### `spread props`
