@@ -11,7 +11,7 @@ export default class ReactImageFallback extends Component {
 	}
 
 	componentDidMount() {
-		this.displayImage = new window.Image();
+		this.displayImage = this.props.img || new window.Image();
 		this.setDisplayImage({ image: this.props.src, fallbacks: this.props.fallbackImage });
 	}
 
@@ -72,7 +72,8 @@ ReactImageFallback.propTypes = {
 	fallbackImage: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.array]).isRequired,
 	initialImage: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 	onLoad: PropTypes.func,
-	onError: PropTypes.func
+	onError: PropTypes.func,
+	img: PropTypes.object
 };
 
 ReactImageFallback.defaultProps = {
