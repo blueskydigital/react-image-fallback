@@ -1,3 +1,14 @@
+# install artefacts
 node_modules
-npm-debug.log
-demo
+
+# debug files
+npm-debug*
+
+# logs
+*.log
+
+# IDE local files
+.idea/
+
+# System local files
+.DS_Store
