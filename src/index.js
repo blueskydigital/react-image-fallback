@@ -53,6 +53,11 @@ export default class ReactImageFallback extends Component {
 			});
 		};
 		this.displayImage.src = imagesArray[0];
+		if(this.props.img && this.displayImage.complete) {
+			this.setState({
+				imageSource: imagesArray[0]
+			});
+		};
 	}
 
 	render() {
